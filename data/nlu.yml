@@ -1,91 +1,78 @@
+# nlu.yml
 version: "3.1"
 
 nlu:
-- intent: greet
+- intent: salutations
   examples: |
     - hey
     - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+    - bonjour
+    - salut
+    - bonsoir
+    - coucou
+    - cc
+    - slt
+    - coucou toi
 
-- intent: goodbye
+- intent: aurevoir
   examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
+    - au revoir
+    - a plus
+    - a plus tard
+    - bonne journee
     - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+    - a +
 
-- intent: affirm
+- intent: affirmatif
   examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+    - oui
+    - o
+    - c'est ça
+    - bien sur
+    - ok
+    - c'est vrai
 
-- intent: deny
+- intent: negatif
   examples: |
-    - no
+    - non
     - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+    - pas du tout
+    - pas vraiment
+    - c'est faux
+    - absolument pas
 
-- intent: mood_great
+- intent: question_the_vert
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+    - quels sont les thes verts ?
+    - the vert
+    - liste les thes verts
+    - exemple de the vert
 
-- intent: mood_unhappy
+- intent: question_the_noit
   examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+    - quels sont les thes noirs?
+    - the noir
+    - liste les thes noirs
+    - exemple de the noir
 
-- intent: bot_challenge
+- intent: temperature_the_vert
   examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - quelle temperature pour le the vert ?
+    - temperature de l'eau pour le the vert
+    - temperature the vert
+
+- intent: temperature_the_noir
+  examples: |
+    - quelle temperature pour le the noir ?
+    - temperature de l'eau pour le the noir
+    - temperature the noir
+
+- intent: the_prefere
+  examples: |
+    - j'aime le [the vert](the)
+    - je prefere le [the noir](the)
+    - les [thes rouges](the)
+    - les [thes blancs](the) sont mes preferes
+    - j'adore le [the bleus](the)
+    - j'apprecie le [the aux agrumes](the)
+    - je suis plutot [the a la menthe](the)
