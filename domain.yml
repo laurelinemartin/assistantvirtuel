@@ -1,10 +1,6 @@
 # domain.yml
 version: "3.1"
 
-slots:
-  the:
-    type: text
-
 intents:
   - salutations
   - aurevoir
@@ -15,6 +11,13 @@ intents:
   - temperature_the_vert
   - temperature_the_noir
   - the_prefere
+
+entities:
+  - the
+
+slots:
+  the:
+    type: text
 
 responses:
   utter_salutation:
