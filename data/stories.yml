@@ -7,7 +7,11 @@ stories:
   steps:
   - intent: salutations
   - action: utter_salutations
+<<<<<<< HEAD
   - action: utter_demande_the_prefere
+=======
+  - action: demande_the_prefere
+>>>>>>> 9ebfcd92743b62a3c70471b2d0ccaf92d9b862a0
   - intent: the_prefere
     entities:
     - the

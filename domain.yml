@@ -1,33 +1,42 @@
+# domain.yml
 version: "3.1"
 
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
+  - salutations
+  - aurevoir
+  - affirmatif
+  - negatif
+  - question_the_vert
+  - question_the_noir
+  - temperature_the_vert
+  - temperature_the_noir
+  - the_prefere
+
+entities:
+  - the
+
+slots:
+  the:
+    type: text
 
 responses:
-  utter_greet:
-  - text: "Hey! How are you?"
+  utter_salutation:
+  - text: "Bonjour !"
 
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+  utter_aurevoir:
+  - text: "Bonne journée !"
 
-  utter_did_that_help:
-  - text: "Did that help you?"
+  utter_temperature_the_vert:
+  - text: "La température idéale pour le thé vert est de 75°C."
 
-  utter_happy:
-  - text: "Great, carry on!"
+  utter_temperature_the_noir:
+  - text: "La température idéale pour le thé noir est de 85°C."
 
-  utter_goodbye:
-  - text: "Bye"
+  utter_demande_the_prefere:
+  - text: "Quel est votre thé préféré ?"
 
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  utter_compris:
+  - text: "C'est noté !"
 
 session_config:
   session_expiration_time: 60
