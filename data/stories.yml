@@ -1,30 +1,28 @@
+#stories.yml
 version: "3.1"
 
 stories:
 
-- story: happy path
+- story: the prefere path
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+  - intent: salutations
+  - action: utter_salutations
+  - action: utter_demande_the_prefere
+  - intent: the_prefere
+    entities:
+    - the
+  - action: utter_compris
 
-- story: sad path 1
+- story: temperature du the vert
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+  - intent: salutations
+  - action: utter_salutations
+  - intent: temperature_the_vert
+  - action: utter_temperature_the_vert
 
-- story: sad path 2
+- story: temperature du the noir
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+  - intent: salutations
+  - action: utter_salutations
+  - intent: temperature_the_noir
+  - action: utter_temperature_the_noir
