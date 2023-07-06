@@ -9,19 +9,29 @@
 
 # from typing import Any, Text, Dict, List
 #
-# from rasa_sdk import Action, Tracker
-# from rasa_sdk.executor import CollectingDispatcher
-#
-#
-# class ActionHelloWorld(Action):
-#
-#     def name(self) -> Text:
-#         return "action_hello_world"
-#
-#     def run(self, dispatcher: CollectingDispatcher,
-#             tracker: Tracker,
-#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-#
-#         dispatcher.utter_message(text="Hello World!")
-#
-#         return []
+from rasa_sdk import Action, Tracker
+from rasa_sdk.executor import CollectingDispatcher
+
+
+class ActionHelloWorld(Action):
+
+    def name(self) -> Text:
+        return "action_hello_world"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        dispatcher.utter_message(text="Hello World!")
+
+        return []
+
+class ActionSetThePrefere(Action):
+    def name(self):
+        return "action_set_the_prefere"
+
+    def run(self, dispatcher, tracker, domain):
+        intent = tracker.latest_message["intent"].get("name")
+        if intent not null:
+          return [SlotSet("likes_music", intent)
+        return []
