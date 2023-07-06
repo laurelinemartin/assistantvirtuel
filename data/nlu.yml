@@ -48,7 +48,7 @@ nlu:
     - liste les thes verts
     - exemple de the vert
 
-- intent: question_the_noit
+- intent: question_the_noir
   examples: |
     - quels sont les thes noirs?
     - the noir
