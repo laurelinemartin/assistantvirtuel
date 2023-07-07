@@ -20,7 +20,8 @@ slots:
     type: list
     influence_conversation: false
     mappings:
-    - type: custom
+    - type: from_entity
+      entity: cuisine
 
 responses:
   utter_salutations:
